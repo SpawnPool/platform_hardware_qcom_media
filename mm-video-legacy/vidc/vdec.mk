@@ -112,9 +112,8 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 mm-vdec-test-inc    := hardware/qcom/media/mm-core/inc
-mm-vdec-test-inc    += $(LOCAL_PATH)/inc
-mm-vdec-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 mm-vdec-test-inc    += $(LOCAL_PATH)/vdec/inc
+mm-vdec-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 LOCAL_MODULE                    := mm-vdec-omx-test
 LOCAL_MODULE_TAGS               := optional
@@ -137,9 +136,8 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 
 mm-vdec-drv-test-inc    := hardware/qcom/media/mm-core/inc
-mm-vdec-drv-test-inc    += $(LOCAL_PATH)/inc
-mm-vdec-drv-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 mm-vdec-drv-test-inc    += $(LOCAL_PATH)/vdec/inc
+mm-vdec-drv-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 LOCAL_MODULE                    := mm-video-driver-test
 LOCAL_MODULE_TAGS               := optional

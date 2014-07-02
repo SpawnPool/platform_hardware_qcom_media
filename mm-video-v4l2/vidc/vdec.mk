@@ -135,9 +135,6 @@ LOCAL_SRC_FILES         += vdec/src/omx_vdec_msm8974.cpp
 else
 LOCAL_SHARED_LIBRARIES  += libhardware
 libmm-vdec-inc          += hardware/qcom/$(DISPLAY)/libhwcomposer
-LOCAL_SRC_FILES         += src/power_module.cpp
-LOCAL_SRC_FILES         += src/omx_vdec.cpp
-libmm-vdec-inc          += hardware/qcom/display/$(TARGET_BOARD_PLATFORM)/libhwcomposer
 LOCAL_SRC_FILES         += vdec/src/power_module.cpp
 LOCAL_SRC_FILES         += vdec/src/omx_vdec.cpp
 endif
@@ -191,9 +188,8 @@ endif
 include $(CLEAR_VARS)
 
 mm-vdec-test-inc    := hardware/qcom/media/mm-core/inc
-mm-vdec-test-inc    += $(LOCAL_PATH)/inc
-mm-vdec-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 mm-vdec-test-inc    += $(LOCAL_PATH)/vdec/inc
+mm-vdec-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 mm-vdec-test-inc    += $(vdec-inc)
 
 LOCAL_MODULE                    := mm-vdec-omx-test
@@ -217,9 +213,8 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 
 mm-vdec-drv-test-inc    := hardware/qcom/media/mm-core/inc
-mm-vdec-drv-test-inc    += $(LOCAL_PATH)/inc
-mm-vdec-drv-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 mm-vdec-drv-test-inc    += $(LOCAL_PATH)/vdec/inc
+mm-vdec-drv-test-inc    += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 mm-vdec-drv-test-inc    += $(vdec-inc)
 
 LOCAL_MODULE                    := mm-video-driver-test
